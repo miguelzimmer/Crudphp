@@ -46,13 +46,13 @@
             return ($sql->rowCount() > 0) ? $sql->fetchAll() : [];
         }
 
-        public function consultaCEP() {
+        // public function consultaCEP() {
             
-            $url = "https://www.cepaberto.com/api/v3/cep"
+        //     $url = "https://www.cepaberto.com/api/v3/cep"
             
-            $cep_origem
+        //     $cep_origem
 
-        }
+        // }
  
     }
 ?>
