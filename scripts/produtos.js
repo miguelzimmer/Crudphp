@@ -1,6 +1,6 @@
 $(document).ready(() => {
     $('#produtos').DataTable({
-        "ajax": "processa.php",
+        "ajax": "listar.php",
         "columns": [
             { "data": "id" },
             { "data": "cep_origem" },
