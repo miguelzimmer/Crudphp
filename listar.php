@@ -7,4 +7,6 @@ $p->conectar("crud","localhost","root","");
 $dados = $p->listar();
 
 echo json_encode(["data" => $dados]);
+
+
 ?>

@@ -46,6 +46,18 @@
             return ($sql->rowCount() > 0) ? $sql->fetchAll() : [];
         }
 
+
+        public function deletar($dados) {
+            global $pdo;
+            $id = $dados[0];
+        $pdo->prepare("DELETE FROM ceps WHERE id = :id");
+        $id = $dados;
+        $sql->bindValue(":id",$id);
+        $sql->execute();
+
+
+        }
+
         // public function consultaCEP() {
             
         //     $url = "https://www.cepaberto.com/api/v3/cep"

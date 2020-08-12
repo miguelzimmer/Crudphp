@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 10-Ago-2020 às 16:20
+-- Tempo de geração: 12-Ago-2020 às 20:19
 -- Versão do servidor: 10.4.13-MariaDB
 -- versão do PHP: 7.4.8
 
@@ -24,30 +24,31 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `produtos`
+-- Estrutura da tabela `ceps`
 --
 
-CREATE TABLE `produtos` (
+CREATE TABLE `ceps` (
   `id` int(11) NOT NULL,
-  `cep_origem` int(10) NOT NULL,
-  `cep_destino` int(10) NOT NULL
+  `cep_origem` int(8) NOT NULL,
+  `cep_destino` int(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `produtos`
+-- Extraindo dados da tabela `ceps`
 --
 
-INSERT INTO `produtos` (`id`, `cep_origem`, `cep_destino`) VALUES
-(1, 12345678, 87654321);
+INSERT INTO `ceps` (`id`, `cep_origem`, `cep_destino`) VALUES
+(1, 12345678, 87654321),
+(2, 89025200, 89025100);
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices para tabela `produtos`
+-- Índices para tabela `ceps`
 --
-ALTER TABLE `produtos`
+ALTER TABLE `ceps`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -55,10 +56,10 @@ ALTER TABLE `produtos`
 --
 
 --
--- AUTO_INCREMENT de tabela `produtos`
+-- AUTO_INCREMENT de tabela `ceps`
 --
-ALTER TABLE `produtos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `ceps`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
